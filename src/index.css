@@ -84,3 +84,10 @@ body {
     background-color: #1d4ed8;
     color: #ffffff;
 }
+
+.app-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
