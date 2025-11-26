@@ -24,7 +24,7 @@ function HomePage() {
                     alt="High-level architecture of the adaptive learning platform"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                 />
-                <p style={{ fontSize: "0.9rem", color: "#6b7280", marginTop: "6px" }}>
+                <p className="figure-caption">
                     Fig. 1 – Example architecture of an AI-based adaptive learning platform.
                 </p>
             </div>

@@ -30,7 +30,7 @@ function ProgressPage() {
             </ul>
 
             <div style={{ marginTop: "16px" }}>
-                <button className="icon-button" onClick={handleShowRecommendation}>
+                <button className="menu-button" onClick={handleShowRecommendation}>
           <span className="icon">
             <FaLightbulb />
           </span>
@@ -38,9 +38,7 @@ function ProgressPage() {
                 </button>
             </div>
 
-            {recommendation && (
-                <p style={{ marginTop: "12px", fontStyle: "italic" }}>{recommendation}</p>
-            )}
+            {recommendation && <p style={{ marginTop: "12px", fontStyle: "italic" }}>{recommendation}</p>}
 
             <div style={{ marginTop: "16px", textAlign: "center" }}>
                 <img
@@ -48,7 +46,7 @@ function ProgressPage() {
                     alt="Example student progress chart"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                 />
-                <p style={{ fontSize: "0.9rem", color: "#6b7280", marginTop: "6px" }}>
+                <p className="figure-caption">
                     Fig. 2 – Example of a progress chart used for adaptive recommendations.
                 </p>
             </div>
