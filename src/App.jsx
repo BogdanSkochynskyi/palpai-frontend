@@ -9,6 +9,7 @@ import CoursesPage from "./pages/CoursesPage";
 import LessonPage from "./pages/LessonPage";
 import ProgressPage from "./pages/ProgressPage";
 import SettingsPage from "./pages/SettingsPage";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
     const [currentPage, setCurrentPage] = useState("home");
@@ -37,6 +38,8 @@ function App() {
                 <section className="app-content">{renderPage()}</section>
                 <Footer />
             </main>
+
+            <ScrollToTopButton/>
         </div>
     );
 }

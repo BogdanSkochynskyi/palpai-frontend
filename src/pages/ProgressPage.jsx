@@ -1,4 +1,16 @@
+import { FaLightbulb } from "react-icons/fa";
+import { useState } from "react";
+
 function ProgressPage() {
+    const [recommendation, setRecommendation] = useState("");
+
+    const handleShowRecommendation = () => {
+        setRecommendation(
+            "Based on your progress, PalpAI suggests focusing on the module " +
+            '"AI for Personalized Learning" and repeating key quiz questions.'
+        );
+    };
+
     return (
         <div>
             <h2>Student Progress & Analytics</h2>
@@ -16,6 +28,19 @@ function ProgressPage() {
                 <li>Average quiz score: 82%</li>
                 <li>Recommended focus: &quot;AI for Personalized Learning&quot; module</li>
             </ul>
+
+            <div style={{ marginTop: "16px" }}>
+                <button className="icon-button" onClick={handleShowRecommendation}>
+          <span className="icon">
+            <FaLightbulb />
+          </span>
+                    Show AI recommendation
+                </button>
+            </div>
+
+            {recommendation && (
+                <p style={{ marginTop: "12px", fontStyle: "italic" }}>{recommendation}</p>
+            )}
 
             <div style={{ marginTop: "16px", textAlign: "center" }}>
                 <img
