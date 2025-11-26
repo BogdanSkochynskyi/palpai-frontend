@@ -278,3 +278,25 @@ body {
     color: #6b7280;
     font-style: italic;
 }
+
+.app.focus-mode .app-header,
+.app.focus-mode .app-menu,
+.app.focus-mode .app-footer {
+    opacity: 0.35;
+    transition: opacity 0.2s;
+}
+
+.app.focus-mode .app-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.app.theme-light.focus-mode .app-content {
+    background-color: #fdfdfb;
+}
+
+.app.theme-dark.focus-mode .app-content {
+    background-color: #020617;
+}

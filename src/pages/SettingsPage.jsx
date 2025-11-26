@@ -1,10 +1,21 @@
-function SettingsPage({ theme, fontSize, onChangeTheme, onChangeFontSize }) {
+function SettingsPage({
+                          theme,
+                          fontSize,
+                          focusMode,
+                          onChangeTheme,
+                          onChangeFontSize,
+                          onToggleFocusMode,
+                      }) {
     const handleThemeChange = (event) => {
         onChangeTheme(event.target.value);
     };
 
     const handleFontSizeChange = (event) => {
         onChangeFontSize(event.target.value);
+    };
+
+    const handleFocusModeChange = (event) => {
+        onToggleFocusMode(event.target.checked);
     };
 
     return (
@@ -49,9 +60,22 @@ function SettingsPage({ theme, fontSize, onChangeTheme, onChangeFontSize }) {
                 </select>
             </div>
 
-            <p style={{ marginTop: "16px", fontStyle: "italic" }}>
+            <div style={{ marginTop: "16px" }}>
+                <h3>Focus mode</h3>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={focusMode}
+                        onChange={handleFocusModeChange}
+                    />{" "}
+                    Enable focus mode (reduce distractions and optimize reading)
+                </label>
+            </div>
+
+            <p className="helper-text" style={{ marginTop: "16px" }}>
                 The selected settings are applied to the whole application: header,
-                menu, content and footer.
+                menu, content and footer. Focus mode keeps the layout structure but
+                visually emphasizes the main learning content.
             </p>
         </div>
     );

@@ -16,6 +16,7 @@ function App() {
 
     const [theme, setTheme] = useState("light");
     const [fontSize, setFontSize] = useState("normal");
+    const [focusMode, setFocusMode] = useState(false);
 
     const renderPage = () => {
         switch (currentPage) {
@@ -30,8 +31,10 @@ function App() {
                     <SettingsPage
                         theme={theme}
                         fontSize={fontSize}
+                        focusMode={focusMode}
                         onChangeTheme={setTheme}
                         onChangeFontSize={setFontSize}
+                        onToggleFocusMode={setFocusMode}
                     />
                 );
             case "home":
@@ -41,7 +44,11 @@ function App() {
     };
 
     return (
-        <div className={`app theme-${theme} font-${fontSize}`}>
+        <div
+            className={`app theme-${theme} font-${fontSize}${
+                focusMode ? " focus-mode" : ""
+            }`}
+        >
             <main className="app-main">
                 <Header />
                 <MenuBar currentPage={currentPage} onChangePage={setCurrentPage} />
