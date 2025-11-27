@@ -1,30 +1,64 @@
+import { useEffect, useState } from "react";
+import { API_BASE_URL } from "../apiConfig";
+
 function CoursesPage() {
+    const [courses, setCourses] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        async function loadCourses() {
+            try {
+                setLoading(true);
+                setError(null);
+
+                const response = await fetch(`${API_BASE_URL}/courses`);
+                if (!response.ok) {
+                    throw new Error("Failed to load courses");
+                }
+
+                const data = await response.json();
+                setCourses(data);
+            } catch (e) {
+                setError(e.message || "Unknown error");
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        loadCourses();
+    }, []);
+
     return (
         <div>
             <h2>Available Courses</h2>
             <p>
-                This section shows an example list of courses that can be managed by
-                the adaptive learning platform. In a real system, these courses would
-                be loaded from the backend and adapted to each student.
+                This list of courses is loaded from the PalpAI backend (Java + MySQL).
+                In a real system, each course could be personalized for a specific student.
             </p>
 
-            <div className="card-grid">
-                <div className="card">
-                    <h3>Introduction to Java</h3>
-                    <p>Level: Beginner</p>
-                    <p>Recommended for: students with no prior programming experience.</p>
+            {loading && <p className="helper-text">Loading courses...</p>}
+            {error && (
+                <p className="helper-text" style={{ color: "#b91c1c" }}>
+                    Error: {error}
+                </p>
+            )}
+
+            {!loading && !error && courses.length === 0 && (
+                <p>No courses found.</p>
+            )}
+
+            {!loading && !error && courses.length > 0 && (
+                <div className="card-grid">
+                    {courses.map((course) => (
+                        <div key={course.id} className="card">
+                            <h3>{course.title}</h3>
+                            {course.level && <p>Level: {course.level}</p>}
+                            {course.description && <p>{course.description}</p>}
+                        </div>
+                    ))}
                 </div>
-                <div className="card">
-                    <h3>AI for Personalized Learning</h3>
-                    <p>Level: Intermediate</p>
-                    <p>Recommended for: students interested in educational data mining.</p>
-                </div>
-                <div className="card">
-                    <h3>User Interface Design for e-Learning</h3>
-                    <p>Level: Intermediate</p>
-                    <p>Recommended for: students focusing on human-computer interaction.</p>
-                </div>
-            </div>
+            )}
         </div>
     );
 }
