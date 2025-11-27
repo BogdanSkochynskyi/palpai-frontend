@@ -499,4 +499,43 @@ body {
     flex-wrap: wrap;
 }
 
+/* Modern quiz action buttons */
+.icon-button {
+    padding: 8px 14px;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.icon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.45);
+}
+
+.icon-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.35);
+}
+
+.icon-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Dark theme adjustments */
+.app.theme-dark .icon-button {
+    background: linear-gradient(90deg, #1e40af, #1d4ed8);
+    box-shadow: 0 2px 6px rgba(30, 64, 175, 0.45);
+}
+
+.app.theme-dark .icon-button:hover {
+    box-shadow: 0 5px 12px rgba(30, 64, 175, 0.6);
+}
+
 

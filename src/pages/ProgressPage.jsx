@@ -47,7 +47,7 @@ function ProgressPage() {
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                 />
                 <p className="figure-caption">
-                    Fig. 2 – Example of a progress chart used for adaptive recommendations.
+                    Example of a progress chart used for adaptive recommendations.
                 </p>
             </div>
         </div>

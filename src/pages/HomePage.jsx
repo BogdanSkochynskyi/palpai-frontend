@@ -25,7 +25,7 @@ function HomePage() {
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                 />
                 <p className="figure-caption">
-                    Fig. 1 – Example architecture of an AI-based adaptive learning platform.
+                    Example architecture of an AI-based adaptive learning platform.
                 </p>
             </div>
         </div>
