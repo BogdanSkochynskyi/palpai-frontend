@@ -388,3 +388,115 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Quiz card layout */
+.quiz-card {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background-color: rgba(248, 250, 252, 0.9);
+}
+
+/* Dark theme */
+.app.theme-dark .quiz-card {
+    border-color: #1f2937;
+    background-color: #020617;
+}
+
+/* Progress section */
+.quiz-progress {
+    margin-bottom: 10px;
+}
+
+.quiz-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.app.theme-dark .quiz-progress-header {
+    color: #9ca3af;
+}
+
+.quiz-progress-bar {
+    margin-top: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: #e5e7eb;
+    overflow: hidden;
+}
+
+.app.theme-dark .quiz-progress-bar {
+    background-color: #1f2937;
+}
+
+.quiz-progress-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #22c55e, #2563eb);
+    transition: width 0.3s ease;
+}
+
+/* Options */
+.quiz-options {
+    margin-top: 10px;
+    display: grid;
+    gap: 6px;
+}
+
+.quiz-option {
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    border: 1px solid transparent;
+}
+
+.quiz-option input {
+    margin-right: 4px;
+}
+
+/* when просто обрано */
+.quiz-option.selected {
+    background-color: #e5edff;
+    border-color: #bfdbfe;
+}
+
+/* правильна відповідь */
+.quiz-option.correct {
+    background-color: #dcfce7;
+    border-color: #22c55e;
+}
+
+/* неправильна обрана відповідь */
+.quiz-option.incorrect {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+}
+
+/* dark theme adjustments */
+.app.theme-dark .quiz-option.selected {
+    background-color: #1e293b;
+    border-color: #3b82f6;
+}
+
+.app.theme-dark .quiz-option.correct {
+    background-color: #052e16;
+    border-color: #22c55e;
+}
+
+.app.theme-dark .quiz-option.incorrect {
+    background-color: #450a0a;
+    border-color: #ef4444;
+}
+
+/* Buttons under quiz */
+.quiz-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
