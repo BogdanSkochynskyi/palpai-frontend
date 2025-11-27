@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
 import LessonPage from "./pages/LessonPage";
 import ProgressPage from "./pages/ProgressPage";
-import SettingsPage from "./pages/SettingsPage";
+import AboutPage from "./pages/AboutPage.jsx";
 
 function App() {
     const [currentPage, setCurrentPage] = useState("home");
@@ -26,17 +26,8 @@ function App() {
                 return <LessonPage />;
             case "progress":
                 return <ProgressPage />;
-            case "settings":
-                return (
-                    <SettingsPage
-                        theme={theme}
-                        fontSize={fontSize}
-                        focusMode={focusMode}
-                        onChangeTheme={setTheme}
-                        onChangeFontSize={setFontSize}
-                        onToggleFocusMode={setFocusMode}
-                    />
-                );
+            case "about":
+                return <AboutPage />;
             case "home":
             default:
                 return <HomePage />;
@@ -50,7 +41,14 @@ function App() {
             }`}
         >
             <main className="app-main">
-                <Header />
+                <Header
+                    theme={theme}
+                    fontSize={fontSize}
+                    focusMode={focusMode}
+                    onChangeTheme={setTheme}
+                    onChangeFontSize={setFontSize}
+                    onToggleFocusMode={setFocusMode}
+                />
                 <MenuBar currentPage={currentPage} onChangePage={setCurrentPage} />
                 <section className="app-content">{renderPage()}</section>
                 <Footer />

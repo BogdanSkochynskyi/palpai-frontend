@@ -1,9 +1,10 @@
+// src/components/MenuBar.jsx
 import {
     FaHome,
     FaBook,
     FaChalkboardTeacher,
     FaChartLine,
-    FaCog,
+    FaInfoCircle,
 } from "react-icons/fa";
 
 function MenuBar({ currentPage, onChangePage }) {
@@ -12,7 +13,7 @@ function MenuBar({ currentPage, onChangePage }) {
         { id: "courses", label: "Courses", icon: <FaBook /> },
         { id: "lesson", label: "Lesson", icon: <FaChalkboardTeacher /> },
         { id: "progress", label: "Progress", icon: <FaChartLine /> },
-        { id: "settings", label: "Settings", icon: <FaCog /> },
+        { id: "about", label: "About", icon: <FaInfoCircle /> },
     ];
 
     return (
@@ -25,7 +26,7 @@ function MenuBar({ currentPage, onChangePage }) {
                     }
                     onClick={() => onChangePage(item.id)}
                 >
-                    <span style={{ marginRight: "6px" }}>{item.icon}</span>
+                    <span>{item.icon}</span>
                     {item.label}
                 </button>
             ))}

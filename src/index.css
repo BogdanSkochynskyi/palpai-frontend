@@ -29,6 +29,15 @@ body {
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(148, 163, 184, 0.4);
     margin-bottom: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.header-text {
+    flex: 1;
 }
 
 .app-header h1 {
@@ -300,3 +309,82 @@ body {
 .app.theme-dark.focus-mode .app-content {
     background-color: #020617;
 }
+
+.ui-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.ui-link {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.ui-link:hover {
+    text-decoration: underline;
+}
+
+.ui-link.active {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.font-size-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.font-size-separator {
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+.ui-btn svg {
+    font-size: 1rem;
+}
+
+.app.theme-dark .ui-btn {
+    background-color: #1e293b;
+    color: #e5e7eb;
+}
+
+.app.theme-dark .ui-btn:hover {
+    background-color: #334155;
+}
+
+.app.theme-dark .ui-btn.active {
+    background-color: #2563eb;
+}
+
+.ui-link-icon {
+    font-size: 1rem;
+}
+
+.app.theme-dark .ui-link {
+    color: #bfdbfe;
+}
+
+.app.theme-dark .font-size-separator {
+    color: #6b7280;
+}
+
+.app,
+.app-main,
+.app-content,
+.app-header,
+.app-footer,
+.menu-button,
+body {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
