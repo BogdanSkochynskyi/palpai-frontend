@@ -1,9 +1,9 @@
 function Footer() {
     return (
         <footer className="app-footer">
-            <div>Author: Bogdan Skochynskyi</div>
+            <div>Author: PhD student Bogdan Skochynskyi</div>
             <div>
-                University / Program: KNU, speciality 126 &mdash; Information Systems and Technologies
+                University / Program: KNU, speciality F6 &mdash; Information Systems and Technologies
             </div>
             <div>Year: 2025</div>
         </footer>

@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import { FaBullseye } from "react-icons/fa";
 
 function Header({
@@ -24,14 +23,11 @@ function Header({
                 </p>
             </div>
 
-            {/* Панель керування UI справа */}
             <div className="ui-controls">
-                {/* Тема */}
                 <button className="ui-link" onClick={toggleTheme}>
                     {theme === "light" ? "Dark" : "Light"}
                 </button>
 
-                {/* Розмір шрифту S | N | L */}
                 <div className="font-size-controls">
                     <button
                         className={
@@ -61,7 +57,6 @@ function Header({
                     </button>
                 </div>
 
-                {/* Focus mode */}
                 <button
                     className={"ui-link" + (focusMode ? " active" : "")}
                     onClick={() => onToggleFocusMode(!focusMode)}

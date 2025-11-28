@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { API_BASE_URL } from "../apiConfig";
 
-const TOTAL_QUESTIONS = 5; // наш міні-тест на 5 питань
+const TOTAL_QUESTIONS = 5;
 
 function LessonPage() {
     const [question, setQuestion] = useState(null);
@@ -10,7 +10,7 @@ function LessonPage() {
     const [error, setError] = useState(null);
 
     const [selectedOption, setSelectedOption] = useState("");
-    const [answerResult, setAnswerResult] = useState(null); // { correct, correctOption }
+    const [answerResult, setAnswerResult] = useState(null);
     const [checkingAnswer, setCheckingAnswer] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
 
@@ -19,7 +19,6 @@ function LessonPage() {
 
     useEffect(() => {
         loadFirstQuestion();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     async function loadFirstQuestion() {
@@ -131,7 +130,6 @@ function LessonPage() {
             return base;
         }
 
-        // Після перевірки відповіді:
         if (answerResult.correctOption === opt) {
             base += " correct";
         } else if (
