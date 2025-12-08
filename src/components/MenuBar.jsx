@@ -1,4 +1,3 @@
-// src/components/MenuBar.jsx
 import {
     FaHome,
     FaBook,

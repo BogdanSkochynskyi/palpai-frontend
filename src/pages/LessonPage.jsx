@@ -89,7 +89,7 @@ function LessonPage() {
             setError(null);
 
             const response = await fetch(
-                `${API_BASE_URL}/quiz/${question.id}/answer`,
+                `${API_BASE_URL}/quiz/answer/${question.id}`,
                 {
                     method: "POST",
                     headers: {

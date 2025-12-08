@@ -28,6 +28,21 @@ function HomePage() {
                     Example architecture of an AI-based adaptive learning platform.
                 </p>
             </div>
+            <p>
+                PalpAI uses a modern three-tier architecture integrating a React frontend,
+                a Java Spring Boot backend and a MySQL relational database. Communication
+                between the layers is implemented through REST API endpoints.
+            </p>
+            <div style={{ marginTop: "16px", textAlign: "center" }}>
+                <img
+                    src="/images/about-page-architecture.webp"
+                    alt="Application Architecture"
+                    style={{ maxWidth: "100%", borderRadius: "8px" }}
+                />
+                <p className="figure-caption">
+                    PalpAI application architecture.
+                </p>
+            </div>
         </div>
     );
 }

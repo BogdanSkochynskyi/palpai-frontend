@@ -1,4 +1,4 @@
-import { FaBullseye } from "react-icons/fa";
+import {FaBullseye} from "react-icons/fa";
 
 function Header({
                     theme,
@@ -15,11 +15,11 @@ function Header({
     return (
         <header className="app-header">
             <div className="header-text">
-                <h1>PalpAI – Personal Adaptive Learning Path AI</h1>
+                <h1>PalpAI – Personal Adaptive Learning Paths AI</h1>
                 <p>Intelligent adaptive learning platform with personalized interaction.</p>
                 <p className="helper-text">
-                    Dissertation topic: Methods of building an intelligent adaptive learning
-                    platform with personalized interaction.
+                    Dissertation topic: Methods for building an intelligent adaptive learning platform with personalized
+                    interaction based on artificial intelligence technologies.
                 </p>
             </div>
 
@@ -63,7 +63,7 @@ function Header({
                     title="Toggle focus mode"
                 >
           <span className="ui-link-icon">
-            <FaBullseye />
+            <FaBullseye/>
           </span>
                 </button>
             </div>

@@ -13,7 +13,6 @@ import AboutPage from "./pages/AboutPage.jsx";
 
 function App() {
     const [currentPage, setCurrentPage] = useState("home");
-
     const [theme, setTheme] = useState("light");
     const [fontSize, setFontSize] = useState("normal");
     const [focusMode, setFocusMode] = useState(false);
